@@ -75,7 +75,7 @@ const ModalOne = ({
       onCancel={clearFieldsAndClose}
       okText={changeCredit ? "Apply Credit" : "Pay Dues"}
       onOk={() => {
-        changeCredit ? handleSubmit() : openPaymentModal();
+        changeCredit ? handleSubmit() : openPaymentModal(invoiceData);
       }}
     >
       <Form>

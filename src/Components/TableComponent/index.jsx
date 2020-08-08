@@ -176,9 +176,10 @@ export default function TableComp() {
           applyCredit(data);
         }}
         invoiceData={chosen}
-        openPaymentModal={() => {
+        openPaymentModal={(invoiceFromCred) => {
           setAddFlag(false);
           openPay(false);
+          setPayableAmount(invoiceFromCred.amountDue);
         }}
       />
       <WrappedPaymentModal
